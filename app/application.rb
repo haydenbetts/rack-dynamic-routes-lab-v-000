@@ -6,6 +6,7 @@ class Application
     # create a rack response
     # and a rack request
     req = Rack::Request.new
+    resp = Rack::Response.new
 
   end
 
