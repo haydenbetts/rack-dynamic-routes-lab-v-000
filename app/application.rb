@@ -7,9 +7,10 @@ class Application
   def call(env)
     # create a rack response
     # and a rack request
+    binding.pry
+
     req = Rack::Request.new
     resp = Rack::Response.new
-    binding.pry
   end
 
 # app should accept /items/<item NAME> route
