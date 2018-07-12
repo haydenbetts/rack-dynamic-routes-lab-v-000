@@ -10,8 +10,8 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split(/items/).last
-      
-      if @@items.include?(item)
+
+      if @@items.detect {|item| item.name == item}
 
     else
       resp.write "Route not found"
