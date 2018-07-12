@@ -11,7 +11,9 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
 
-      if @@items.detect {|item| item.name == item_name}
+      @@items.each do 
+        {|item| item.name == item_name}
+
 
     else
       resp.write "Route not found"
