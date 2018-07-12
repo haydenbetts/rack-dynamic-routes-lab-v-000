@@ -10,7 +10,9 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split(/items/).last
-      @@items.include?(item)
+      
+      if @@items.include?(item)
+
     else
       resp.write "Route not found"
       resp.status = 404
