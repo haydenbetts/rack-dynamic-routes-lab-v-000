@@ -12,7 +12,7 @@ class Application
       item_name = req.path.split(/items/).last
 
       @@items.each do |item|
-        item.name == item_name ? resp.write "#{item.price}" : next
+        resp.write "#{item.price}" if item.name == item_name
       end
         {|item| item.name == item_name}
 
