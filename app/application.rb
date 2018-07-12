@@ -9,6 +9,7 @@ class Application
     resp = Rack::Response.new
 
     if req.path.match(/items/)
+      binding.pry
       item_name = req.path.split(/items/).last
 
       if item = @@items.detect {|item| item.name == item_name}
