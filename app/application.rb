@@ -12,6 +12,8 @@ class Application
     req = Rack::Request.new(env)
     resp = Rack::Response.new
 
+    if req.path
+
   end
 
 # app should accept /items/<item NAME> route
