@@ -5,8 +5,6 @@ class Application
 
   def call(env)
 
-    binding.pry
-
     req = Rack::Request.new(env)
     resp = Rack::Response.new
 
