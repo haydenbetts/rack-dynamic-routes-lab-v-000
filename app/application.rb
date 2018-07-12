@@ -9,7 +9,8 @@ class Application
     resp = Rack::Response.new
 
     if req.path.match(/items/)
-      req.path.split(/items/).last
+      item = req.path.split(/items/).last
+      @@items.include?(item)
     else
       resp.write "Route not found"
       resp.status = 404
