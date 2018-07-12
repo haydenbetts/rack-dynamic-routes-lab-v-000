@@ -11,11 +11,10 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
 
+      if @@items.detect {|item| item.name == item_name}
       @@items.each do |item|
         resp.write "#{item.price}" if item.name == item_name
       end
-        {|item| item.name == item_name}
-
 
     else
       resp.write "Route not found"
