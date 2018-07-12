@@ -11,7 +11,9 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
 
-      @@items.each do 
+      @@items.each do |item|
+        item.name == item_name ? resp.write "#{item.price}" : next
+      end
         {|item| item.name == item_name}
 
 
