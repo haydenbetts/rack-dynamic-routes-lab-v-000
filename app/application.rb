@@ -9,7 +9,7 @@ class Application
     # and a rack request
     binding.pry
 
-    req = Rack::Request.new
+    req = Rack::Request.new(env)
     resp = Rack::Response.new
   end
 
